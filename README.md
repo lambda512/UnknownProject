@@ -29,6 +29,9 @@
 이 프로젝트는 팀프로젝트로 협의를 통해 **웹 쇼핑몰**을 개발하는 것으로 웹 쇼핑몰은 사용자가 가장 친숙하게 접근할 수 있으며, 개발자의 입장에서 많은 기능 구현 과제들을 통해 성장할 수 있는 계기가 될 것으로 기대되어 선택하게 되었습니다.
 이 프로젝트는 학습한 웹 개발 기술 HTML, CSS, JavaScript와 Servlet, JSP, 스프링 프레임워크 등을 활용하고, 오라클 데이터베이스를 적용해 동작하는 웹 애플리케이션입니다.
 
+*프로젝트 목표 : 소셜 로그인 및 결제 api를 적용하여 서버와 클라이언트가 별도로 분리된 Spring FrameWork, jsp 쇼핑몰 사이트
+**개발 기간 : 24/04/23 ~ 24/05/30
+
 ## 사용한 기술 스택
 
 - 개발 환경 : Spring Tool Suite3(3.9.17.RELEASE), Visual Studio Code, Apache Tomcat9.0, Java11, Windows 10 
@@ -36,12 +39,16 @@
 - 마크업 언어 : HTML, XML
 - 스타일 시트 언어 : CSS
 - 데이터베이스: Oracle(11.2.0.2.0)
+- 타겟 : Web Browser
 - 버전 관리 : Git
 - 문서 관리 : Notion
-- 라이브러리 : Spring-Security(5.4.2), Spring-Web-MVC, MyBatis(3.5.14), Lombok, ojdbc8, HikariCP, Jackson, Gson, AspectJ, Thumbnailator, Json-simple, slf4j, Junit(4.12)
+- 라이브러리 : Spring-Security(5.4.2), Spring-Web-MVC, MyBatis(3.5.14), Lombok, ojdbc8, HikariCP, Jackson, Gson, AspectJ, Thumbnailator, Json-simple, slf4j, Junit(4.12), Bootstrap
 
-### **참고 웹사이트(랭킹 닭컴(https://www.rankingdak.com/))**
+### **참고 웹사이트(랭킹 닭컴(https://www.rankingdak.com/), 문헌(코드로 배우는 스프링 웹 프로젝트(구멍가게 코딩단, 남가람북스))**
 
 1. **디자인 및 레이아웃 분석:**  헤더, 슬라이더, 세션, 푸터로 구성된 레이아웃과 편리하고 익숙한 인터페이스 구조를 갖고 있습니다.
 2. **게시판 분석**: 공지사항, 질의응답, 자주찾는 질문, 구매후기 4개의 게시판과 특정 게시판은 이미지 파일 첨부가 가능합니다.
 3. **사용자 경험 분석:** 사용자들은 웹사이트의 다양한 필터링을 통해 원하는 정보를 찾을 수 있습니다.
+
+
+
