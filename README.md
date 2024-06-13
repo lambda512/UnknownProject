@@ -110,12 +110,14 @@
       (2) 일반 회원가입 실행화면
       
       ![normaljoin](https://github.com/lambda512/UnknownProject/assets/155952874/a8cee934-64fa-49bf-94df-862abfa14a9e)
+      
 
     * **아이디, 비밀번호 찾기**
       * 이메일을 입력하여 해당 이메일 주소로 가입된 아이디를 찾을 수 있습니다.
       * 비밀번호 찾기 페이지에서 이메일 입력 후 '인증번호 전송' 버튼을 클릭하면 인증번호가 포함된 메일이 전송되며, 올바른 인증번호를 입력하면 발급된 임시 비밀번호가 메일로 발송됩니다.
   
       ![findidandpassword](https://github.com/lambda512/UnknownProject/assets/155952874/da741760-4de0-435b-b67a-016d098656da)
+      
 
     * **회원 정보수정**
       * 로그인을 완료한 회원은 상단 네비게이션 정보수정 버튼 혹은 마이페이지 - 회원정보관리 - 정보수정 탭을 통해 회원 정보수정 페이지로 접근할 수 있습니다.
@@ -125,45 +127,54 @@
       
        ![4_update](https://github.com/lambda512/UnknownProject/assets/155952874/c7be9b53-a903-4978-8759-e6898da3d3af)
 
+
     * **메인화면**
       * 메인 화면에서는 MD 지정 상품, 추천 상품(주문 이력이 없는 상품), 최다 판매량 상품 TOP4, 신상품, 닭다리살(카테고리 코드 1402), 상품명에 '패키지'가 포함된 상품, 맛있닭 상품(브랜드 ID 2)을 조회할 수 있습니다.
 
       ![5_main](https://github.com/lambda512/UnknownProject/assets/155952874/52e22417-4378-49f5-9b12-3c79f4a7a16d)
+      
 
     * **카테고리**
       * 카테고리 탭에서는 각 상위 카테고리(전체) 혹은 해당 상위 카테고리에 포함된 하위 카테고리 상품을 조회할 수 있습니다.
 
       ![6_category](https://github.com/lambda512/UnknownProject/assets/155952874/2ad2cb5b-c5eb-4421-b047-98699f3c3a3e)
       
+      
     * **랭킹**
       * 랭킹 탭에서는 주문이 존재하는 상품 중, 주문량이 많은 상품부터 내림차순으로 상품을 조회할 수 있습니다.
 
       ![7_ranking](https://github.com/lambda512/UnknownProject/assets/155952874/ad4c57d7-0c25-4391-85ec-6a709082e1b6)
+      
 
     * **이달의 특가**
       * 이달의 특가 탭에서는 할인율이 존재하는 상품 중, 할인율이 높은 상품부터 내림차순으로 상품을 조회할 수 있습니다.
 
       ![8_promotion](https://github.com/lambda512/UnknownProject/assets/155952874/d94649e2-9a11-4b6d-8792-dddfd611e202)
       
+      
     * **브랜드관**
       * 브랜드관 탭에서는 등록된 모든 브랜드를 조회, 검색(필터링) 할 수 있으며 해당 브랜드를 클릭하면 해당 브랜드 코드를 가지고 있는 상품을 조회할 수 있습니다.
 
      ![9_brand](https://github.com/lambda512/UnknownProject/assets/155952874/b437900a-9664-432a-9d6a-fb6aa812a09e)
+    
       
     * **888데이**
       * 888데이 탭에서는 관리자가 지정한 시간 한정 할인 상품을 조회할 수 있습니다.(시간은 매일 오후 8시를 기준으로 설정되어 있습니다.)
 
       ![10_timesale](https://github.com/lambda512/UnknownProject/assets/155952874/ae690a55-6cf0-43f4-bfe3-34a558231f45)
       
+      
     * **혜택정리**
       * 혜택정리 탭에서는 로그인 된 회원이 댓글을 작성할 수 있고, 남긴 댓글을 조회할 수 있습니다.
       
       ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+      
 
     * **검색**
       * 헤더의 상단 검색 창에서는 상품명과 브랜드명을 기준으로 상품을 필터링하여 조회할 수 있습니다.
       
       ![12_search](https://github.com/lambda512/UnknownProject/assets/155952874/bf886c65-7550-4753-9b6f-9549237af5b1)
+      
       
     * **장바구니**
       * 로그인을 완료한 회원은 상품 상세 페이지를 통해 상품을 장바구니에 추가할 수 있습니다.
@@ -171,6 +182,7 @@
       * 우측 상단 장바구니 아이콘을 통해 장바구니 탭에 접근하여 장바구니에 추가된 상품의 수량을 조절하거나, 장바구니에서 삭제할 수 있습니다.
       
       ![13_cart](https://github.com/lambda512/UnknownProject/assets/155952874/0b9e9ef6-7307-4bbc-b47f-1ff44960d4b3)
+      
 
     * **주문**
       * 회원은 장바구니의 주문하기 혹은 상품 상세 페이지의 바로 구매 버튼을 통하여 주문 페이지로 이동할 수 있습니다.
@@ -179,6 +191,7 @@
       * 결제하기 버튼을 누르면 포트원(아임포트) 결제 API를 호출하여 결제 및 포인트 차감, 적립을 진행할 수 있습니다.
       
       ![14_order](https://github.com/lambda512/UnknownProject/assets/155952874/81113901-f98b-47ad-8167-c1b8ca480123)
+      
 
     * **마이페이지**
       * 로그인을 완료한 회원은 상단 정보수정 버튼 혹은 사람 모양의 아이콘을 통해 회원 정보 수정 페이지로 접근하여 마이페이지에서 회원정보를 변경할 수 있습니다.
@@ -212,6 +225,7 @@
        ![19_1by1QNA](https://github.com/lambda512/UnknownProject/assets/155952874/95d4d87d-ccf7-4742-89a2-0d9b9a4ab7af)
         
 
+
   * **관리자**
 
     * **관리자 페이지**
@@ -221,6 +235,7 @@
 
       ![20_admindashbord](https://github.com/lambda512/UnknownProject/assets/155952874/b9d22f3d-b675-41ba-aabd-9d73b52d33f0)
       
+      
       * **상품 관리**
         * '상품 작업' 탭에서는 상품 목록을 호출하고 상품을 등록, 수정, 품절 처리 할 수 있습니다.
         * '재고 관리' 탭에서는 각 상품의 재고량을 호출하고 발주 신청, 입고 처리를 통해 상품의 재고량을 증가시킬 수 있습니다.
@@ -228,16 +243,21 @@
         * '카테고리 등록' 탭에서는 카테고리 목록을 호출하고 카테고리를 등록, 수정, 삭제 처리 할 수 있습니다.
 
          (1) 상품 작업
+
         ![21_itemenroll](https://github.com/lambda512/UnknownProject/assets/155952874/c8e7c308-2753-4881-ab56-5d2388b6f16e)
   
          (2) 재고 관리
+
         ![22_itemstock](https://github.com/lambda512/UnknownProject/assets/155952874/854d64dc-bd40-43ad-9f26-ce5aec7adfe1)
     
          (3) 브랜드 등록
+
         ![23_brandenroll](https://github.com/lambda512/UnknownProject/assets/155952874/9b8afea1-89b3-4b8f-a724-c2cd3b63afa3)
     
          (4) 카테고리 등록
+
         ![24_categoryenroll](https://github.com/lambda512/UnknownProject/assets/155952874/b7b98878-291e-4a46-aec9-71da6c25e0e1)
+
   
       * **게시판 관리**
         * '공지사항' 탭에서는 공지사항 목록을 호출하고 공지사항을 등록, 수정, 삭제 처리 할 수 있습니다.
@@ -246,6 +266,7 @@
         * '질의응답' 탭에서는 1:1 문의 목록을 호출하고 1:1 문의를 등록, 수정, 삭제 처리할 수 있으며 1:1 문의에 대한 답변을 작성할 수 있습니다.
        
         ![25_adminboard](https://github.com/lambda512/UnknownProject/assets/155952874/61b03e37-d540-4bc7-890d-7e38f23dbb68)
+
   
       * **회원 관리**
         * '회원 작업' 탭에서는 회원 목록을 호출하고 회원등록, 수정(권한 유형, 휴면 여부), 휴면, 탈퇴 처리를 할 수 있습니다.
@@ -253,6 +274,7 @@
         * '장바구니 조회' 탭에서는 전체 회원의 장바구니 목록을 호출하여 조회할 수 있습니다.
        
          ![26_membermanage](https://github.com/lambda512/UnknownProject/assets/155952874/b7d789c8-7167-4477-b6d9-638ec48d574c)
+
   
       * **주문 관리**
         * '주문 & 배송' 탭에서는 주문을 등록, 수정, 취소 처리할 수 있습니다.
