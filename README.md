@@ -94,26 +94,106 @@
   * **메인 페이지**
 
     * **로그인**
-      * 메인 페이지의 로그인 화면을 통해 일반 로그인, 우측 상단의 `로그인`을 통해 일반 로그인, 소셜 로그인이 가능합니다.
+      * 메인 페이지 우측 상단 네비게이션 메뉴를 통해 로그인 페이지에 접근이 가능하며, 로그인 아이디 저장, 아이디 찾기, 비밀번호 찾기, 카카오 소셜 로그인이 가능합니다.
       
-     ![PS_01_login socialLogin](https://github.com/JongHoonKim1004/Project_Survey/assets/155927559/d15792bb-ce78-461f-9bac-44ba31d9dc95)
+     ![login](https://github.com/lambda512/UnknownProject/assets/155952874/fc2baa13-7f48-4679-80fa-4fa4478bd924)
 
     * **회원가입**
-      * 회원가입 페이지에서 '우편번호 찾기' 를 통해 DAUM 주소 검색 API를 호출할 수 있습니다.
-   
-      ![PS_02_UsersRegister](https://github.com/JongHoonKim1004/Project_Survey/assets/155927559/03e68b7a-42bc-4e80-9d5b-93cff3a07311)
+      * (공통)회원가입 페이지에서 '주소 검색' 버튼을 통해 Daum 주소 검색 API를 호출하여 주소 입력을 진행할 수 있습니다.
+      * (소셜)회원가입 페이지 혹은 로그인 페이지에서 'K' 버튼을 누르면 카카오 소셜 로그인 API를 호출하여 카카오 계정으로 회원가입 및 로그인을 진행할 수 있습니다.
+      * (일반)로그인 페이지의 '간편회원가입' 버튼 혹은 상단 회원가입 버튼을 통해 이동한 회원가입 페이지에서 '이메일 인증' 버튼 클릭 시 이메일 인증을 통해 일반 회원가입을 진행할 수 있습니다.
+      
+      (1) 소셜 회원가입 실행화면
+      
+      ![kakaologin](https://github.com/lambda512/UnknownProject/assets/155952874/c3c0f2b9-7262-4f8f-be58-df0e45e2f5ad)
+
+      (2) 일반 회원가입 실행화면
+      
+      ![normaljoin](https://github.com/lambda512/UnknownProject/assets/155952874/a8cee934-64fa-49bf-94df-862abfa14a9e)
 
     * **아이디, 비밀번호 찾기**
-      * 이름과 연락처를 입력하여 아이디를 찾을 수 있습니다.
-      * 비밀번호 찾기 페이지에서 이메일 입력 후 '인증번호 전송' 버튼을 클릭하면 인증번호가 포함된 메일이 전송되며 인증번호를 올바르게 입력하면 비밀번호를 다시 설정하는 페이지로 이동할 수 있습니다.
-   
-      ![PS_03_idFind pwFind](https://github.com/JongHoonKim1004/Project_Survey/assets/155927559/7feec2d9-ed4d-4a5a-b95d-616d1c6f3340)
+      * 이메일을 입력하여 해당 이메일 주소로 가입된 아이디를 찾을 수 있습니다.
+      * 비밀번호 찾기 페이지에서 이메일 입력 후 '인증번호 전송' 버튼을 클릭하면 인증번호가 포함된 메일이 전송되며, 올바른 인증번호를 입력하면 발급된 임시 비밀번호가 메일로 발송됩니다.
+  
+      ![findidandpassword](https://github.com/lambda512/UnknownProject/assets/155952874/da741760-4de0-435b-b67a-016d098656da)
 
-    * **고객센터**
-      * 공지사항, 자주묻는 질문은 메인 페이지 내에서는 목록과 상세보기만 가능합니다.
-      * 1:1 문의는 일반회원만 접근 가능하며 1:1 문의 작성 후에는 `마이페이지` -> `내 1:1 문의` 로 이동합니다.
+    * **회원 정보수정**
+      * 로그인을 완료한 회원은 상단 네비게이션 정보수정 버튼 혹은 마이페이지 - 회원정보관리 - 정보수정 탭을 통해 회원 정보수정 페이지로 접근할 수 있습니다.
+      * 정보수정 페이지에서 로그인 시 입력했던 비밀번호를 올바르게 입력하면 정보를 수정할 수 있으며, 이름, 비밀번호, 휴대폰 번호, 주소만을 수정할 수 있습니다.
+      * 비밀번호 수정 시 비밀번호 수정 버튼을 누르고 수정할 비밀번호를 입력하여 수정하기 버튼을 누르면 수정할 수 있습니다.
+      * 주소 찾기 버튼을 통해 Daum API를 호출하여 주소를 수정할 수 있습니다.
       
-       ![PS_04_board](https://github.com/JongHoonKim1004/Project_Survey/assets/155927559/49264601-d238-40ed-827c-1b91672eba2d)
+       ![4_update](https://github.com/lambda512/UnknownProject/assets/155952874/c7be9b53-a903-4978-8759-e6898da3d3af)
+
+    * **메인화면**
+      * 메인 화면에서는 MD 지정 상품, 추천 상품(주문 이력이 없는 상품), 최다 판매량 상품 TOP4, 신상품, 닭다리살(카테고리 코드 1402), 상품명에 '패키지'가 포함된 상품, 맛있닭 상품(브랜드 ID 2)을 조회할 수 있습니다.
+
+      ![5_main](https://github.com/lambda512/UnknownProject/assets/155952874/52e22417-4378-49f5-9b12-3c79f4a7a16d)
+
+    * **카테고리**
+      * 카테고리 탭에서는 각 상위 카테고리(전체) 혹은 해당 상위 카테고리에 포함된 하위 카테고리 상품을 조회할 수 있습니다.
+
+      ![6_category](https://github.com/lambda512/UnknownProject/assets/155952874/2ad2cb5b-c5eb-4421-b047-98699f3c3a3e)
+      
+    * **랭킹**
+      * 랭킹 탭에서는 주문이 존재하는 상품 중, 주문량이 많은 상품부터 내림차순으로 상품을 조회할 수 있습니다.
+
+      ![7_ranking](https://github.com/lambda512/UnknownProject/assets/155952874/ad4c57d7-0c25-4391-85ec-6a709082e1b6)
+
+    * **이달의 특가**
+      * 이달의 특가 탭에서는 할인율이 존재하는 상품 중, 할인율이 높은 상품부터 내림차순으로 상품을 조회할 수 있습니다.
+
+      ![8_promotion](https://github.com/lambda512/UnknownProject/assets/155952874/d94649e2-9a11-4b6d-8792-dddfd611e202)
+      
+    * **브랜드관**
+      * 브랜드관 탭에서는 등록된 모든 브랜드를 조회, 검색(필터링) 할 수 있으며 해당 브랜드를 클릭하면 해당 브랜드 코드를 가지고 있는 상품을 조회할 수 있습니다.
+
+     ![9_brand](https://github.com/lambda512/UnknownProject/assets/155952874/b437900a-9664-432a-9d6a-fb6aa812a09e)
+      
+    * **888데이**
+      * 888데이 탭에서는 관리자가 지정한 시간 한정 할인 상품을 조회할 수 있습니다.(시간은 매일 오후 8시를 기준으로 설정되어 있습니다.)
+
+      ![10_timesale](https://github.com/lambda512/UnknownProject/assets/155952874/ae690a55-6cf0-43f4-bfe3-34a558231f45)
+      
+    * **혜택정리**
+      * 혜택정리 탭에서는 로그인 된 회원이 댓글을 작성할 수 있고, 남긴 댓글을 조회할 수 있습니다.
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
+
+    * **검색**
+      * 
+      
+      ![11_benefits](https://github.com/lambda512/UnknownProject/assets/155952874/122bad83-db4f-496d-b9d3-0d1018490c63)
 
     * **마이페이지**
       * `내 정보 관리` 에서는 회원정보를 변경할 수 있습니다.
@@ -124,12 +204,6 @@
       
        ![PS_05_mypage](https://github.com/JongHoonKim1004/Project_Survey/assets/155927559/e324a9d7-8d42-44d7-a4f5-989dc3a4c22f)
     
-    * **설문조사**
-      * 일반회원으로 로그인 한 회원은 메인 페이지에서 참여 가능한 설문조사를 확인할 수 있습니다.
-      * 설문조사 이름을 클릭하면 새로운 팝업창에서 설문조사에 참여할 수 있습니다.
-      * 설문조사가 조기종료 혹은 정상종료 될 경우, 포인트가 지급됩니다.
-
-      ![PS_06_survey](https://github.com/JongHoonKim1004/Project_Survey/assets/155927559/d645c45b-ae05-441e-9914-27a38a156560)
 
   * **사업자**
     
