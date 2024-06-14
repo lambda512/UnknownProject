@@ -110,7 +110,7 @@
 
       (2) 일반 회원가입 실행화면
       
-      ![normaljoin](https://github.com/lambda512/UnknownProject/assets/155952874/a8cee934-64fa-49bf-94df-862abfa14a9e)
+      ![normaljoin](https://github.com/lambda512/UnknownProject/assets/155952874/d0cad6f4-7c51-42cf-b926-df3578483fe8)
       
 
     * **아이디, 비밀번호 찾기**
