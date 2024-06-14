@@ -26,7 +26,7 @@
 **개발 기간 : 24/04/23 ~ 24/05/30
 
 ## 사용한 기술 스택
-- API : Daum 주소 API, 카카오 소셜 API, Portone(아임포트) 결제 API
+- API : Daum 주소 API, 카카오 소셜 API, Portone 결제 API
 - 개발 환경 : Spring Tool Suite3(3.9.17.RELEASE), Visual Studio Code, Apache Tomcat9.0, Java11, Windows 10 
 - 프로그래밍 언어 : Java(11), JavaScript(ES6)
 - 마크업 언어 : HTML, XML
