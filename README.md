@@ -266,24 +266,23 @@
         * '구매 후기' 탭에서는 후기 목록을 호출하고 후기를 등록, 수정, 삭제 처리 할 수 있으며, 후기에 대한 답글을 작성할 수 있습니다. 작성한 후기와 답글은 해당 상품의 상세 페이지에서도 조회가 가능합니다.
         * '질의응답' 탭에서는 1:1 문의 목록을 호출하고 1:1 문의를 등록, 수정, 삭제 처리할 수 있으며 1:1 문의에 대한 답변을 작성할 수 있습니다.
        
-        ![25_adminboard](https://github.com/lambda512/UnknownProject/assets/155952874/61b03e37-d540-4bc7-890d-7e38f23dbb68)
-
+        ![25_adminboard](https://github.com/lambda512/UnknownProject/assets/155952874/61b03e37-d540-4bc7-890d-7e38f23dbb68)<br/>
+        
   
       * **회원 관리**
         * '회원 작업' 탭에서는 회원 목록을 호출하고 회원등록, 수정(권한 유형, 휴면 여부), 휴면, 탈퇴 처리를 할 수 있습니다.
         * '혜택 문의' 탭에서는 혜택 정리 페이지의 댓글 목록을 호출하고 댓글을 작성, 수정, 삭제할 수 있으며, 답변 또한 작성 가능합니다.
         * '장바구니 조회' 탭에서는 전체 회원의 장바구니 목록을 호출하여 조회할 수 있습니다.
        
-         ![26_membermanage](https://github.com/lambda512/UnknownProject/assets/155952874/b7d789c8-7167-4477-b6d9-638ec48d574c)
-
+        ![26_membermanage](https://github.com/lambda512/UnknownProject/assets/155952874/b7d789c8-7167-4477-b6d9-638ec48d574c)
+       
   
       * **주문 관리**
         * '주문 & 배송' 탭에서는 주문을 등록, 수정, 취소 처리할 수 있습니다.
         * '주문 상품' 탭에서는 전체 회원의 주문 목록을 호출하여 조회할 수 있습니다.
        
         ![27_ordermanage](https://github.com/lambda512/UnknownProject/assets/155952874/74275b04-b465-43bf-bab4-bb5235b1f77e)
-        <br>
-        <br>
+
 
 
 ## 🌄 개선사항
