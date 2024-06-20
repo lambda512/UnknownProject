@@ -10,7 +10,7 @@
 	<div class="col-lg-10">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				Board List Page
+				Notice List Page
 				
 			</div>
 			<!-- /.panel-heading -->
@@ -36,7 +36,7 @@
 				            <input type='text' class='custom-keyword' name='keyword' value='<c:out value="${pageMaker.cri.keyword}"/>' /> 
 				            <input type='hidden' name='pageNum' value='<c:out value="${pageMaker.cri.pageNum}"/>' /> 
 				            <input type='hidden' name='amount' value='<c:out value="${pageMaker.cri.amount}"/>' />
-				            <button class='btn custom-btn'>Search</button>
+				            <button class='btn btn-default'>Search</button>
 				        </form>
 				    </div>
 				    
@@ -166,7 +166,7 @@
 					<div class="form-group">
 						<label for="noticeBrand">브랜드</label> <input type="text"
 							class="form-control" name="noticeBrand"
-							placeholder="브랜드 관련 공지시 브랜드를 입력하세요" required>
+							placeholder="브랜드 관련 공지시 브랜드를 입력하세요">
 					</div>
 
                     <div class="form-group">
@@ -190,7 +190,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-noticeName" id="cartModalLabel">회원 수정</h5>
+				<h5 class="modal-noticeName" id="cartModalLabel">공지사항 수정</h5>
 				<button type="button" class="close" aria-label="Close"
 					onclick="closeModal(this)">
 					<span aria-hidden="true">&times;</span>
@@ -228,7 +228,7 @@
 			
                 <div class="form-group">
 					<label for="noticeRegdate">등록일</label> <input type="text"
-						id="noticeRegdate" name='noticeRegdate' class="form-control" readonly>					
+						id="noticeRegdate" class="form-control" readonly>				
 				</div>
 
                 <div class="form-group">

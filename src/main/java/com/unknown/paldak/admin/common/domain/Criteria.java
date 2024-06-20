@@ -8,29 +8,27 @@ import lombok.ToString;
 @Setter
 @Getter
 public class Criteria {
-   private Integer pageNum; //í˜ì´ì§€ ë²ˆí˜¸
-   private Integer amount; //í˜ì´ì§€ ë³´ì—¬ì¤„ ê°¯ìˆ˜
-   private String type;  //ê²€ìƒ‰ì¡°ê±´, T(ì œëª©), C(ë‚´ìš©), W(ì‘ì„±ì)
-   private String keyword;  //ê²€ìƒ‰ì¡°ê±´
+   private Integer pageNum; // ÆäÀÌÁö ¹øÈ£
+   private Integer amount; // ÆäÀÌÁö ´ç Ç×¸ñ ¼ö
+   private String type; // °Ë»ö Á¶°Ç
+   private String keyword; // °Ë»ö Å°¿öµå
    private String sortColumn;
-//   private String sortOrder;
-   
-   
+   private String groupColumn;
+
    public Criteria() {
-	   this(1,10); //ë””í´íŠ¸
-   }
-   
-   public Criteria(int pageNum, int amount) {
-	   this.pageNum = pageNum;   
-	   this.amount = amount;   
-   }
-   
-   //TCW(ë¬¸ìì—´)        T C W   ê²€ìƒ‰ì¡°ê±´
-   public String[] getTypeArr() {
-   	  return type==null? new String[] {} : type.split("");
+       this(1,10); // ±âº»°ª ¼³Á¤
    }
 
+   public Criteria(int pageNum, int amount) {
+       this.pageNum = pageNum;
+       this.amount = amount;
+   }
+
+   public String[] getTypeArr() {
+       return type == null ? new String[] {} : type.split("");
+   }
 }
+
 
 
 

@@ -55,7 +55,7 @@
 		}
 		
 		/* 기본 버튼 스타일링 */
-		.custom-btn {
+		.custom-btn, .btn-default {
 		  margin-right: 5px;
 		  display: inline-block; /* 인라인 요소로 표시되도록 설정 */
 		  padding: 8px 12px; /* 내부 여백 설정 */
@@ -145,4 +145,13 @@
         .full-opacity {
             opacity: 1;
         }
+        
+        .benefits-description {
+		    max-width: 200px; /* 최대 너비 설정 */
+		    white-space: nowrap; /* 텍스트가 한 줄로 표시되도록 설정 */
+		    overflow: hidden; /* 넘치는 내용을 숨기기 */
+		    text-overflow: ellipsis; /* 넘치는 내용을 생략 부호(...)로 표시 */
+		    border: 1px solid #ddd; /* 테두리 추가 (선택 사항) */
+		    padding: 5px; /* 패딩 추가 (선택 사항) */
+		}
         

@@ -10,8 +10,7 @@
 	<div class="col-lg-10">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				Board List Page
-				
+				Qna List Page
 			</div>
 			<!-- /.panel-heading -->
 			<div class="panel-body">
@@ -19,26 +18,26 @@
 				  <div class="row">       
 				    <div class="col-lg-12">                    
 				        <form id='searchForm' action="/admin/qna/list" method='get' class='searchForm'>
-				            <select class="custom-select" name='type'>
+				           <select class="custom-select" name='type'>
 				                <option value=""
 				                    <c:out value="${pageMaker.cri.type == null?'selected':''}"/>>--</option>
 				                <option value="W"
 				                    <c:out value="${pageMaker.cri.type eq 'W'?'selected':''}"/>>작성자</option>
 				                <option value="T"
 				                    <c:out value="${pageMaker.cri.type eq 'T'?'selected':''}"/>>제목</option>
-				                <option value="C"
-				                    <c:out value="${pageMaker.cri.type eq 'C'?'selected':''}"/>>내용</option>
+				                <option value="I"
+				                    <c:out value="${pageMaker.cri.type eq 'I'?'selected':''}"/>>상품ID</option>
 				                <option value="WT"
 				                    <c:out value="${pageMaker.cri.type eq 'WT'?'selected':''}"/>>작성자 or 제목</option>
-				                <option value="WC"
-				                    <c:out value="${pageMaker.cri.type eq 'WC'?'selected':''}"/>>작성자 or 내용</option>
-				                <option value="WTC"
-				                    <c:out value="${pageMaker.cri.type eq 'WTC'?'selected':''}"/>>작성자 or 제목 or 내용</option>
+				                <option value="WI"
+				                    <c:out value="${pageMaker.cri.type eq 'WI'?'selected':''}"/>>작성자 or 상품ID</option>
+				                <option value="WTI"
+				                    <c:out value="${pageMaker.cri.type eq 'WTI'?'selected':''}"/>>작성자 or 제목 or 상품ID</option>
 				            </select> 
 				            <input type='text' class='custom-keyword' name='keyword' value='<c:out value="${pageMaker.cri.keyword}"/>' /> 
 				            <input type='hidden' name='pageNum' value='<c:out value="${pageMaker.cri.pageNum}"/>' /> 
 				            <input type='hidden' name='amount' value='<c:out value="${pageMaker.cri.amount}"/>' />
-				            <button class='btn custom-btn'>Search</button>
+				            <button class='btn btn-default'>Search</button>
 				        </form>
 				    </div>
 				    
@@ -64,6 +63,7 @@
 					<thead>
 						<tr>
 							<th>순번</th>
+							<th>상품ID</th>
                             <th>제목</th>
                             <th>작성자</th>
                             <th>등록일</th>
@@ -73,19 +73,13 @@
 					</thead>
 					<tbody>
 						 <c:forEach var="QNA" items="${qnas}" varStatus="status">
-					        <!-- 현재 리뷰에 대응하는 리플 -->
-					        <c:set var="currentReply" value="N" />
-					        <c:forEach var="reply" items="${replys}">
-					            <c:if test="${QNA.qnaId == reply.qnaId}">
-					                <c:set var="currentReply" value="${reply.answer}" />
-					            </c:if>
-					        </c:forEach>
 					        <tr class="odd gradeX">
 					            <td><a href='#' id="${QNA.qnaId}" onclick="goToDetailModalForm(this)">${QNA.qnaId}</a></td>
+					            <td>${QNA.itemId}</td>
 					            <td>${QNA.qnaTitle}</td>
 					            <td>${QNA.qnaWriter}</td>
 					            <td><fmt:formatDate pattern="yyyy-MM-dd" value="${QNA.qnaRegdate}" /></td>
-					            <td>${currentReply}</td>
+					            <td>${QNA.answer != null ? QNA.answer : 'N'}</td>
 					        </tr>
 					    </c:forEach>
 					</tbody>
@@ -162,7 +156,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-qnaName" id="cartModalLabel">구매 후기 등록</h5>
+				<h5 class="modal-qnaName" id="cartModalLabel">1:1 문의 등록</h5>
 				<button type="button" class="close" aria-label="Close"
 					onclick="closeModal('#formModal')">
 					<span aria-hidden="true">&times;</span>
@@ -171,7 +165,11 @@
 			<div class="modal-body">
 				<form id="registerForm" name="registerForm" role="form" action="register" method="post" enctype="multipart/form-data">
 
-
+					<div class="form-group">
+						<label for="itemId">상품ID</label> <input type="text" class="form-control" data-type="register" name="itemId" placeholder="상품ID를 숫자로 입력하세요" required>
+					    <button type="button" class="btn btn-default col-lg-3 btn-dark my-2" onclick="checkItem(this, 'register')">상품 확인</button>	
+					</div>
+					
 					<div class="form-group">
 						<label for="qnaTitle">제목</label> <input type="text"
 							class="form-control" name="qnaTitle"
@@ -210,7 +208,7 @@
                     </div>
                     
                     
-					<button type="submit" class="btn btn-default btn-success">Submit Button</button>
+					<button type="submit" class="btn btn-default btn-success" id="submitBtn">Submit Button</button>
 					<button type="reset" class="btn btn-secondary">다시 작성</button>
 					<button type="button" class="btn btn-secondary" onclick="closeModal(this)">list</button>
 				</form>
@@ -225,7 +223,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-qnaName" id="cartModalLabel">구매 후기 수정/삭제/댓글</h5>
+				<h5 class="modal-qnaName" id="cartModalLabel">1:1 문의 수정/삭제/댓글</h5>
 				<button type="button" class="close" aria-label="Close"
 					onclick="closeModal(this)">
 					<span aria-hidden="true">&times;</span>
@@ -236,6 +234,9 @@
 	        
 				<div class="form-group">
 					<label>게시글 ID</label> <input class="form-control" name='qnaId' id='qnaId' readonly>
+				</div>
+				<div class="form-group">
+					<label>상품 ID</label> <input class="form-control" name='itemId' id='itemId' readonly>
 				</div>
 				<div class="form-group">
 					<label>제목</label> <input class="form-control"
@@ -286,7 +287,7 @@
 				</div>
 				
 				<div class="form-group">
-					<label for="reply">후기 감사 인사</label> <textarea 
+					<label for="reply">답변 내용</label> <textarea 
                        class="form-control" id="reply" name="reply" rows="6" placeholder="관리자 입력" required></textarea>
 				</div>
 				
@@ -312,6 +313,32 @@
 <%@include file="includes/footer.jsp"%>
 
 <script>
+
+function checkItem(element) {
+    var itemId = $(element).prevAll('input[data-type="register"]').val();
+    if (itemId === "") {
+        alert("상품ID를 입력하세요.");
+        return false;
+    }
+    $.ajax({
+		url: '/admin/item/checkItem/'+ itemId,
+		type: 'get', 
+		data: { itemId: itemId },
+		success: function(response)  {
+            if (response.result) {
+            	alert("상품이 존재합니다. 이어서 작성해주세요.");
+                document.getElementById("submitBtn").disabled = false;
+            } else {
+                alert("입력하신 아이템 정보가 없습니다.");
+                document.getElementById("submitBtn").disabled = true;
+            }
+        },
+		error: function(xhr, status, error) {
+			console.error('AJAX 요청 실패:', error);
+			document.getElementById("submitBtn").disabled = true;
+		}
+	});
+}
 function updateActionUrl() {
     var currentUrl = window.location.href;
     var newPath;
@@ -339,8 +366,8 @@ function goToDetailModalForm(element) {
         },
 		success: function(response) {
 			var QNAData = response.qna;
-			
 			$("#qnaId").val(QNAData.qnaId);
+			$("#itemId").val(QNAData.itemId);
 			$("#qnaTitle").val(QNAData.qnaTitle);
 			$("#qnaContent").text(QNAData.qnaContent);
 			$("#qnaCategory").val(QNAData.qnaCategory);
@@ -355,16 +382,13 @@ function goToDetailModalForm(element) {
 			var isoDateString = upDateDate.toISOString().substring(0, 10);
 			console.log(isoDateString);
 			$('#qnaUpdateDate').val(isoDateString);
-			
 			$("#reply").text("");
 			$("#replyId").val("");
-			
 			if(response.reply != null) {
 				var replyData = response.reply;
 				$("#reply").text(replyData.reply);
 				$("#replyId").val(replyData.replyId);
-			}
-			
+			}	
 			$('#formModal2').modal('show');
 		},
 		error: function(xhr, status, error) {

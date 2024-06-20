@@ -10,7 +10,7 @@
 	<div class="col-lg-10">
 		<div class="panel panel-default">
 			<div class="panel-heading">
-				Board List Page
+				Faq List Page
 				
 			</div>
 			<!-- /.panel-heading -->
@@ -36,7 +36,7 @@
 				            <input type='text' class='custom-keyword' name='keyword' value='<c:out value="${pageMaker.cri.keyword}"/>' /> 
 				            <input type='hidden' name='pageNum' value='<c:out value="${pageMaker.cri.pageNum}"/>' /> 
 				            <input type='hidden' name='amount' value='<c:out value="${pageMaker.cri.amount}"/>' />
-				            <button class='btn custom-btn'>Search</button>
+				            <button class='btn btn-default'>Search</button>
 				        </form>
 				    </div>
 				    
@@ -53,7 +53,7 @@
 					class="table table-striped table-bordered table-hover"
 					id="dataTables-example">
 					
-					<caption class="table-caption">공지 사항</caption>
+					<caption class="table-caption">자주 묻는 질문</caption>
 					<thead>
 						<tr>
 							<th>순번</th>
@@ -142,7 +142,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-faqName" id="cartModalLabel">공지사항 등록</h5>
+				<h5 class="modal-faqName" id="cartModalLabel">자주 묻는 질문 등록</h5>
 				<button type="button" class="close" aria-label="Close"
 					onclick="closeModal('#formModal')">
 					<span aria-hidden="true">&times;</span>
@@ -199,7 +199,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-faqName" id="cartModalLabel">회원 수정</h5>
+				<h5 class="modal-faqName" id="cartModalLabel">자주 묻는 질문 수정</h5>
 				<button type="button" class="close" aria-label="Close"
 					onclick="closeModal(this)">
 					<span aria-hidden="true">&times;</span>
